@@ -955,7 +955,7 @@ parentViewController:(UIViewController*)parentViewController
 #define RETICLE_SIZE    500.0f
 #define RETICLE_WIDTH    10.0f
 #define RETICLE_OFFSET  150.0f
-#define RETICLE_ALPHA     0.5f
+#define RETICLE_ALPHA     1.0f
 
 //-------------------------------------------------------------------------
 // builds the green box and red line
@@ -1010,8 +1010,8 @@ parentViewController:(UIViewController*)parentViewController
         CGContextSetFillColorWithColor(context, color.CGColor);
         CGContextFillRect(context,
                             CGRectMake(
-                                       RETICLE_OFFSET+20.0f,
-                                       RETICLE_OFFSET+20.0f,
+                                       RETICLE_OFFSET+15.0f,
+                                       RETICLE_OFFSET+15.0f,
                                        15.0f,
                                        15.0f
                                        )
@@ -1038,8 +1038,8 @@ parentViewController:(UIViewController*)parentViewController
         CGContextSetFillColorWithColor(context, color.CGColor);
         CGContextFillRect(context,
                             CGRectMake(
-                                       RETICLE_SIZE-RETICLE_OFFSET-15.0f,
-                                       RETICLE_OFFSET+20.0f,
+                                       RETICLE_SIZE-RETICLE_OFFSET-30.0f,
+                                       RETICLE_OFFSET+30.0f,
                                        15.0f,
                                        15.0f
                                        )
