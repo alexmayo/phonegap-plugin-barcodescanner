@@ -954,8 +954,8 @@ parentViewController:(UIViewController*)parentViewController
 
 #define RETICLE_SIZE    500.0f
 #define RETICLE_WIDTH    10.0f
-#define RETICLE_OFFSET   60.0f
-#define RETICLE_ALPHA     0.3f
+#define RETICLE_OFFSET   90.0f
+#define RETICLE_ALPHA     1f
 
 //-------------------------------------------------------------------------
 // builds the green box and red line
@@ -990,7 +990,9 @@ parentViewController:(UIViewController*)parentViewController
     //                        );
     //}
     
+    //Top Left QR Icon
     if (self.processor.is2D) {
+        //Border
         UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
         CGContextSetStrokeColorWithColor(context, color.CGColor);
         CGContextSetLineWidth(context, RETICLE_WIDTH);
@@ -998,6 +1000,46 @@ parentViewController:(UIViewController*)parentViewController
                             CGRectMake(
                                        RETICLE_OFFSET,
                                        RETICLE_OFFSET,
+                                       3.0f,
+                                       3.0f
+                                       )
+                            );
+        //Inner
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetStrokeColorWithColor(context, color.CGColor);
+        CGContextSetLineWidth(context, RETICLE_WIDTH);
+        CGContextStrokeRect(context,
+                            CGRectMake(
+                                       RETICLE_OFFSET+1f,
+                                       RETICLE_OFFSET+1f,
+                                       1.0f,
+                                       1.0f
+                                       )
+                            );
+    }
+    
+    //Top Right QR Icon
+    if (self.processor.is2D) {
+        //Border
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetStrokeColorWithColor(context, color.CGColor);
+        CGContextSetLineWidth(context, RETICLE_WIDTH);
+        CGContextStrokeRect(context,
+                            CGRectMake(
+                                       RETICLE_OFFSET+RETICLE_SIZE-3f,
+                                       RETICLE_OFFSET+RETICLE_SIZE-3f,
+                                       3.0f,
+                                       3.0f
+                                       )
+                            );
+        //Inner
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetStrokeColorWithColor(context, color.CGColor);
+        CGContextSetLineWidth(context, RETICLE_WIDTH);
+        CGContextStrokeRect(context,
+                            CGRectMake(
+                                       RETICLE_OFFSET+1f+RETICLE_SIZE-3f,
+                                       RETICLE_OFFSET+1f+RETICLE_SIZE-3f,
                                        1.0f,
                                        1.0f
                                        )
