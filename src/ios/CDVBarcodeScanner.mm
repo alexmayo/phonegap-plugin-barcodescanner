@@ -955,7 +955,7 @@ parentViewController:(UIViewController*)parentViewController
 #define RETICLE_SIZE    500.0f
 #define RETICLE_WIDTH     5.0f
 #define RETICLE_OFFSET   150.0f
-#define RETICLE_ALPHA     1.0f
+#define RETICLE_ALPHA     0.5f
 
 //-------------------------------------------------------------------------
 // builds the green box and red line
@@ -1018,6 +1018,34 @@ parentViewController:(UIViewController*)parentViewController
                             );
     }
     
+    //BOTTOM LEFT OUTER
+    if (self.processor.is2D) {
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetStrokeColorWithColor(context, color.CGColor);
+        CGContextSetLineWidth(context, RETICLE_WIDTH);
+        CGContextStrokeRect(context,
+                            CGRectMake(
+                                       RETICLE_OFFSET,
+                                       RETICLE_SIZE-RETICLE_OFFSET-30.0f,
+                                       30.0f,
+                                       30.0f
+                                       )
+                            );
+    }
+    //BOTTOM LEFT INNER
+    if (self.processor.is2D) {
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        CGContextFillRect(context,
+                            CGRectMake(
+                                       RETICLE_OFFSET+10.0f,
+                                       RETICLE_SIZE-RETICLE_OFFSET-20.0f,
+                                       10.0f,
+                                       10.0f
+                                       )
+                            );
+    }
+    
     //TOP RIGHT OUTER
     if (self.processor.is2D) {
         UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
@@ -1039,7 +1067,7 @@ parentViewController:(UIViewController*)parentViewController
         CGContextFillRect(context,
                             CGRectMake(
                                        RETICLE_SIZE-RETICLE_OFFSET-20.0f,
-                                       RETICLE_SIZE-RETICLE_OFFSET-20.0f,
+                                       RETICLE_OFFSET,
                                        10.0f,
                                        10.0f
                                        )
