@@ -26,7 +26,7 @@
 // Adds a shutter button to the UI, and changes the scan from continuous to
 // only performing a scan when you click the shutter button.  For testing.
 //------------------------------------------------------------------------------
-define USE_SHUTTER 1
+define USE_SHUTTER 1;
 
 //------------------------------------------------------------------------------
 @class CDVbcsProcessor;
