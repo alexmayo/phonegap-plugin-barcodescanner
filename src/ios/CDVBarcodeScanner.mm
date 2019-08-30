@@ -993,8 +993,9 @@ parentViewController:(UIViewController*)parentViewController
     //TOP LEFT OUTER
     if (self.processor.is2D) {
         UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
-        CGContextSetFillColorWithColor(context, color.CGColor);
-        CGContextFillRect(context,
+        CGContextSetStrokeColorWithColor(context, color.CGColor);
+        CGContextSetLineWidth(context, RETICLE_WIDTH);
+        CGContextStrokeRect(context,
                             CGRectMake(
                                        RETICLE_OFFSET,
                                        RETICLE_OFFSET,
@@ -1005,15 +1006,14 @@ parentViewController:(UIViewController*)parentViewController
     }
     //TOP LEFT INNER
     if (self.processor.is2D) {
-        UIColor* color = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:RETICLE_ALPHA];
-        CGContextSetStrokeColorWithColor(context, color.CGColor);
-        CGContextSetLineWidth(context, RETICLE_WIDTH);
-        CGContextStrokeRect(context,
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        CGContextFillRect(context,
                             CGRectMake(
                                        RETICLE_OFFSET+10.0f,
                                        RETICLE_OFFSET+10.0f,
-                                       3.0f,
-                                       3.0f
+                                       5.0f,
+                                       5.0f
                                        )
                             );
     }
