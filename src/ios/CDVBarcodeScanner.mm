@@ -1010,8 +1010,8 @@ parentViewController:(UIViewController*)parentViewController
         CGContextSetLineWidth(context, RETICLE_WIDTH);
         CGContextStrokeRect(context,
                             CGRectMake(
-                                       RETICLE_OFFSET+1.0f,
-                                       RETICLE_OFFSET+1.0f,
+                                       RETICLE_OFFSET+1,
+                                       RETICLE_OFFSET+1,
                                        1.0f,
                                        1.0f
                                        )
