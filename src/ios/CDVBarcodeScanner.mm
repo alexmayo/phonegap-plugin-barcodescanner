@@ -1010,36 +1010,8 @@ parentViewController:(UIViewController*)parentViewController
         CGContextSetLineWidth(context, RETICLE_WIDTH);
         CGContextStrokeRect(context,
                             CGRectMake(
-                                       RETICLE_OFFSET+1f,
-                                       RETICLE_OFFSET+1f,
-                                       1.0f,
-                                       1.0f
-                                       )
-                            );
-    }
-    
-    //Top Right QR Icon
-    if (self.processor.is2D) {
-        //Border
-        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
-        CGContextSetStrokeColorWithColor(context, color.CGColor);
-        CGContextSetLineWidth(context, RETICLE_WIDTH);
-        CGContextStrokeRect(context,
-                            CGRectMake(
-                                       RETICLE_OFFSET+RETICLE_SIZE-3f,
-                                       RETICLE_OFFSET+RETICLE_SIZE-3f,
-                                       3.0f,
-                                       3.0f
-                                       )
-                            );
-        //Inner
-        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
-        CGContextSetStrokeColorWithColor(context, color.CGColor);
-        CGContextSetLineWidth(context, RETICLE_WIDTH);
-        CGContextStrokeRect(context,
-                            CGRectMake(
-                                       RETICLE_OFFSET+1f+RETICLE_SIZE-3f,
-                                       RETICLE_OFFSET+1f+RETICLE_SIZE-3f,
+                                       RETICLE_OFFSET+1.0f,
+                                       RETICLE_OFFSET+1.0f,
                                        1.0f,
                                        1.0f
                                        )
