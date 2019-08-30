@@ -953,7 +953,7 @@ parentViewController:(UIViewController*)parentViewController
 //--------------------------------------------------------------------------
 
 #define RETICLE_SIZE    500.0f
-#define RETICLE_WIDTH    10.0f
+#define RETICLE_WIDTH     5.0f
 #define RETICLE_OFFSET   90.0f
 #define RETICLE_ALPHA     1.0f
 
@@ -1000,8 +1000,8 @@ parentViewController:(UIViewController*)parentViewController
                             CGRectMake(
                                        RETICLE_OFFSET,
                                        RETICLE_OFFSET,
-                                       3.0f,
-                                       3.0f
+                                       20.0f,
+                                       20.0f
                                        )
                             );
     }
