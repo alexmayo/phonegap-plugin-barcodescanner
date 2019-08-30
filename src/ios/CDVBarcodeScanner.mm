@@ -1082,7 +1082,8 @@ parentViewController:(UIViewController*)parentViewController
         UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
         CGContextSetFillColorWithColor(context, color.CGColor);
         
-        CGContextFillRect(context, CGRectMake(RETICLE_OFFSET+85.0f,RETICLE_OFFSET-5.0f,30.0f,10.0f);
+                                                //X Offset               Y Offset        Width  Height
+        CGContextFillRect(context, CGRectMake(RETICLE_OFFSET+85.0f, RETICLE_OFFSET-5.0f, 30.0f, 10.0f));
     }
 
     result = UIGraphicsGetImageFromCurrentImageContext();
