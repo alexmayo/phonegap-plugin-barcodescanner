@@ -1079,14 +1079,14 @@ parentViewController:(UIViewController*)parentViewController
     
     //Background
     if (self.processor.is2D) {
-        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.2f];
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.12f];
         CGContextSetFillColorWithColor(context, color.CGColor);
         CGContextFillRect(context,
                             CGRectMake(
-                                       RETICLE_OFFSET,
-                                       RETICLE_OFFSET,
-                                       RETICLE_SIZE-2*RETICLE_OFFSET,
-                                       RETICLE_SIZE-2*RETICLE_OFFSET
+                                       RETICLE_OFFSET-5f,
+                                       RETICLE_OFFSET-5f,
+                                       RETICLE_SIZE-2*RETICLE_OFFSET+10f,
+                                       RETICLE_SIZE-2*RETICLE_OFFSET+10f
                                        )
                             );
     }
