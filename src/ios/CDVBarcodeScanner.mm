@@ -1010,8 +1010,8 @@ parentViewController:(UIViewController*)parentViewController
         CGContextSetFillColorWithColor(context, color.CGColor);
         CGContextFillRect(context,
                             CGRectMake(
-                                       RETICLE_OFFSET+20.0f,
-                                       RETICLE_OFFSET+20.0f,
+                                       RETICLE_OFFSET+15.0f,
+                                       RETICLE_OFFSET+15.0f,
                                        15.0f,
                                        15.0f
                                        )
@@ -1038,8 +1038,8 @@ parentViewController:(UIViewController*)parentViewController
         CGContextSetFillColorWithColor(context, color.CGColor);
         CGContextFillRect(context,
                             CGRectMake(
-                                       RETICLE_SIZE-RETICLE_OFFSET-40.0f,
-                                       RETICLE_OFFSET+20.0f,
+                                       RETICLE_SIZE-RETICLE_OFFSET-30.0f,
+                                       RETICLE_OFFSET+15.0f,
                                        15.0f,
                                        15.0f
                                        )
