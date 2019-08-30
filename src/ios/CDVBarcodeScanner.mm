@@ -1018,6 +1018,34 @@ parentViewController:(UIViewController*)parentViewController
                             );
     }
     
+    //BOTTOM LEFT OUTER
+    if (self.processor.is2D) {
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetStrokeColorWithColor(context, color.CGColor);
+        CGContextSetLineWidth(context, RETICLE_WIDTH);
+        CGContextStrokeRect(context,
+                            CGRectMake(
+                                       RETICLE_OFFSET,
+                                       RETICLE_SIZE-RETICLE_OFFSET-50.0f,
+                                       50.0f,
+                                       50.0f
+                                       )
+                            );
+    }
+    //BOTTOM LEFT INNER
+    if (self.processor.is2D) {
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        CGContextFillRect(context,
+                            CGRectMake(
+                                       RETICLE_OFFSET+15.0f,
+                                       RETICLE_SIZE-RETICLE_OFFSET-35.0f,
+                                       20.0f,
+                                       20.0f
+                                       )
+                            );
+    }
+    
     //TOP RIGHT OUTER
     if (self.processor.is2D) {
         UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
@@ -1042,6 +1070,23 @@ parentViewController:(UIViewController*)parentViewController
                                        RETICLE_OFFSET+15.0f,
                                        20.0f,
                                        20.0f
+                                       )
+                            );
+    }
+    
+    
+    
+    
+    //BIT1
+    if (self.processor.is2D) {
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        CGContextFillRect(context,
+                            CGRectMake(
+                                       RETICLE_OFFSET+50.0f,
+                                       RETICLE_OFFSET,
+                                       10.0f,
+                                       10.0f
                                        )
                             );
     }
