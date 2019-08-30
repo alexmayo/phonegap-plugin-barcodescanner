@@ -1054,7 +1054,7 @@ parentViewController:(UIViewController*)parentViewController
         CGContextStrokeRect(context,
                             CGRectMake(
                                        RETICLE_SIZE-RETICLE_OFFSET-30.0f,
-                                       RETICLE_SIZE-RETICLE_OFFSET-30.0f,
+                                       RETICLE_OFFSET+10.0f,
                                        30.0f,
                                        30.0f
                                        )
