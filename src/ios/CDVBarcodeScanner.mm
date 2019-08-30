@@ -955,7 +955,7 @@ parentViewController:(UIViewController*)parentViewController
 #define RETICLE_SIZE    500.0f
 #define RETICLE_WIDTH    10.0f
 #define RETICLE_OFFSET   90.0f
-#define RETICLE_ALPHA      1.0
+#define RETICLE_ALPHA     1.0f
 
 //-------------------------------------------------------------------------
 // builds the green box and red line
