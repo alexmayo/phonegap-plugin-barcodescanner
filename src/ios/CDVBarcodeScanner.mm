@@ -1085,8 +1085,8 @@ parentViewController:(UIViewController*)parentViewController
                             CGRectMake(
                                        RETICLE_OFFSET-5f,
                                        RETICLE_OFFSET-5f,
-                                       RETICLE_SIZE-2*RETICLE_OFFSET+10f,
-                                       RETICLE_SIZE-2*RETICLE_OFFSET+10f
+                                       (RETICLE_SIZE-2*RETICLE_OFFSET)+10f,
+                                       (RETICLE_SIZE-2*RETICLE_OFFSET)+10f
                                        )
                             );
     }
