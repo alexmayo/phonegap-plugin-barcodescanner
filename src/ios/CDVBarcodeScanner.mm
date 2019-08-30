@@ -26,7 +26,7 @@
 // Adds a shutter button to the UI, and changes the scan from continuous to
 // only performing a scan when you click the shutter button.  For testing.
 //------------------------------------------------------------------------------
-#define USE_SHUTTER 1
+#define USE_SHUTTER 0
 
 //------------------------------------------------------------------------------
 @class CDVbcsProcessor;
@@ -955,7 +955,7 @@ parentViewController:(UIViewController*)parentViewController
 #define RETICLE_SIZE    500.0f
 #define RETICLE_WIDTH    10.0f
 #define RETICLE_OFFSET   60.0f
-#define RETICLE_ALPHA     0.4f
+#define RETICLE_ALPHA     1.0f
 
 //-------------------------------------------------------------------------
 // builds the green box and red line
