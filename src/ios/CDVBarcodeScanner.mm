@@ -1012,8 +1012,36 @@ parentViewController:(UIViewController*)parentViewController
                             CGRectMake(
                                        RETICLE_OFFSET+10.0f,
                                        RETICLE_OFFSET+10.0f,
-                                       5.0f,
-                                       5.0f
+                                       10.0f,
+                                       10.0f
+                                       )
+                            );
+    }
+    
+    //TOP RIGHT OUTER
+    if (self.processor.is2D) {
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetStrokeColorWithColor(context, color.CGColor);
+        CGContextSetLineWidth(context, RETICLE_WIDTH);
+        CGContextStrokeRect(context,
+                            CGRectMake(
+                                       RETICLE_SIZE-RETICLE_OFFSET-30.0f,
+                                       RETICLE_SIZE-RETICLE_OFFSET-30.0f,
+                                       30.0f,
+                                       30.0f
+                                       )
+                            );
+    }
+    //TOP RIGHT INNER
+    if (self.processor.is2D) {
+        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        CGContextFillRect(context,
+                            CGRectMake(
+                                       RETICLE_SIZE-RETICLE_OFFSET-20.0f,
+                                       RETICLE_SIZE-RETICLE_OFFSET-20.0f,
+                                       10.0f,
+                                       10.0f
                                        )
                             );
     }
