@@ -953,8 +953,8 @@ parentViewController:(UIViewController*)parentViewController
 //--------------------------------------------------------------------------
 
 #define RETICLE_SIZE    500.0f
-#define RETICLE_WIDTH     5.0f
-#define RETICLE_OFFSET   150.0f
+#define RETICLE_WIDTH    10.0f
+#define RETICLE_OFFSET  150.0f
 #define RETICLE_ALPHA     0.5f
 
 //-------------------------------------------------------------------------
@@ -999,8 +999,8 @@ parentViewController:(UIViewController*)parentViewController
                             CGRectMake(
                                        RETICLE_OFFSET,
                                        RETICLE_OFFSET,
-                                       30.0f,
-                                       30.0f
+                                       50.0f,
+                                       50.0f
                                        )
                             );
     }
@@ -1010,38 +1010,10 @@ parentViewController:(UIViewController*)parentViewController
         CGContextSetFillColorWithColor(context, color.CGColor);
         CGContextFillRect(context,
                             CGRectMake(
-                                       RETICLE_OFFSET+10.0f,
-                                       RETICLE_OFFSET+10.0f,
-                                       10.0f,
-                                       10.0f
-                                       )
-                            );
-    }
-    
-    //BOTTOM LEFT OUTER
-    if (self.processor.is2D) {
-        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
-        CGContextSetStrokeColorWithColor(context, color.CGColor);
-        CGContextSetLineWidth(context, RETICLE_WIDTH);
-        CGContextStrokeRect(context,
-                            CGRectMake(
-                                       RETICLE_OFFSET,
-                                       RETICLE_SIZE-RETICLE_OFFSET-30.0f,
-                                       30.0f,
-                                       30.0f
-                                       )
-                            );
-    }
-    //BOTTOM LEFT INNER
-    if (self.processor.is2D) {
-        UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
-        CGContextSetFillColorWithColor(context, color.CGColor);
-        CGContextFillRect(context,
-                            CGRectMake(
-                                       RETICLE_OFFSET+10.0f,
-                                       RETICLE_SIZE-RETICLE_OFFSET-20.0f,
-                                       10.0f,
-                                       10.0f
+                                       RETICLE_OFFSET+20.0f,
+                                       RETICLE_OFFSET+20.0f,
+                                       15.0f,
+                                       15.0f
                                        )
                             );
     }
@@ -1053,10 +1025,10 @@ parentViewController:(UIViewController*)parentViewController
         CGContextSetLineWidth(context, RETICLE_WIDTH);
         CGContextStrokeRect(context,
                             CGRectMake(
-                                       RETICLE_SIZE-RETICLE_OFFSET-30.0f,
-                                       RETICLE_OFFSET+10.0f,
-                                       30.0f,
-                                       30.0f
+                                       RETICLE_SIZE-RETICLE_OFFSET-50.0f,
+                                       RETICLE_OFFSET,
+                                       50.0f,
+                                       50.0f
                                        )
                             );
     }
@@ -1066,10 +1038,10 @@ parentViewController:(UIViewController*)parentViewController
         CGContextSetFillColorWithColor(context, color.CGColor);
         CGContextFillRect(context,
                             CGRectMake(
-                                       RETICLE_SIZE-RETICLE_OFFSET-20.0f,
-                                       RETICLE_OFFSET,
-                                       10.0f,
-                                       10.0f
+                                       RETICLE_SIZE-RETICLE_OFFSET-15.0f,
+                                       RETICLE_OFFSET+20.0f,
+                                       15.0f,
+                                       15.0f
                                        )
                             );
     }
