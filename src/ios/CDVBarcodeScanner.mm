@@ -1007,16 +1007,16 @@ parentViewController:(UIViewController*)parentViewController
     }
     
     if (self.processor.is2D) {
-        //Inner
+        //Border
         UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
         CGContextSetStrokeColorWithColor(context, color.CGColor);
         CGContextSetLineWidth(context, RETICLE_WIDTH);
         CGContextStrokeRect(context,
                             CGRectMake(
-                                       RETICLE_OFFSET+1,
-                                       RETICLE_OFFSET+1,
-                                       1.0f,
-                                       1.0f
+                                       RETICLE_OFFSET+5.0f,
+                                       RETICLE_OFFSET+5.0f,
+                                       3.0f,
+                                       3.0f
                                        )
                             );
     }
