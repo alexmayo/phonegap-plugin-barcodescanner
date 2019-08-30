@@ -1004,6 +1004,9 @@ parentViewController:(UIViewController*)parentViewController
                                        3.0f
                                        )
                             );
+    }
+    
+    if (self.processor.is2D) {
         //Inner
         UIColor* color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:RETICLE_ALPHA];
         CGContextSetStrokeColorWithColor(context, color.CGColor);
